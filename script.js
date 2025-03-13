@@ -39,8 +39,6 @@ window.onload = function () {
     } else {
         
         localStorage.setItem("refreshCount", refreshCount + 1);
-
-       
         let randomNumber1 = Math.floor(Math.random() * 6) + 1;
         let randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
@@ -48,7 +46,7 @@ window.onload = function () {
             dice1.setAttribute("src", "images/dice" + randomNumber1 + ".png");
             dice2.setAttribute("src", "images/dice" + randomNumber2 + ".png");
 
-           
+            // Decide winner
             if (randomNumber1 > randomNumber2) {
                 title.innerText = "🚩 Player 1 Wins!";
             } else if (randomNumber1 < randomNumber2) {
